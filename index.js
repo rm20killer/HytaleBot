@@ -13,6 +13,9 @@ client.on('message', msg => {
     if(msg.content === '!ping') {
         msg.reply('pong');
     }
+    if(msg.content==='!madeby') {
+        msg.channel.send('this was made by RM20');
+    }
     if (msg.content === '!blog') {
         if (msg.member.roles.cache.find(r => r.name === '⁣       Staff Team       ⁣')) {
         console.log('!blog');
