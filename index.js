@@ -12,8 +12,10 @@ client.on('ready', () => {
 client.on('message', msg => {
     if(msg.content === '!ping') {
         msg.reply('pong');
+        console.log('!ping');
     }
     if(msg.content==='!madeby') {
+        console.log('!madeby');
         msg.channel.send('this was made by RM20');
     }
     if (msg.content === '!blog') {
