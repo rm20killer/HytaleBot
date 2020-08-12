@@ -1,8 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-
 const HytaleApi = require('hytale-api-sdk');
-
 const api = new HytaleApi.ArticlesApi();
 
 client.on('ready', () => {
@@ -13,7 +11,7 @@ client.on('message', msg => {
     if(msg.content === '!ping') {
         msg.reply('pong');
     }
-    if(msg.content==='!madeby') {
+    if(msg.content === '!madeby') {
         msg.channel.send('this was made by RM20');
     }
     if (msg.content === '!blog') {
@@ -23,8 +21,8 @@ client.on('message', msg => {
         api.getArticles({}, function(error, data, response) {
             if (error) {
                 console.error(error);
-                } else {
-                    // get 3 latest articles
+            }
+            else {
                     const latest = data.slice(0, 1);
                     latest.forEach(function(article) {
                         const publishAt = new Date(article.publishedAt);
@@ -36,7 +34,7 @@ client.on('message', msg => {
                             .setDescription(article.bodyExcerpt)
                             .setURL(`https://hytale.com/news/${publishAt.getFullYear()}/${publishAt.getMonth() + 1}/${article.slug}`)
                             .addField('Published At', `${publishAt.toLocaleDateString()}`)
-                        ;  
+                        ;
 
                         msg.channel.send(embed);
                     });
