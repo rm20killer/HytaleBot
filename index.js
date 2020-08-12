@@ -44,7 +44,7 @@ client.on('message', msg => {
             });
         }
         else{
-            msg.reply('need staff role');
+            msg.reply('need staff role. you can check in #blog-posts for latest blog');
         }
     }
 });
