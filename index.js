@@ -12,12 +12,8 @@ client.on('message', msg => {
         msg.reply('pong');
         console.log('!ping');
     }
-<<<<<<< HEAD
-    if(msg.content === '!madeby') {
-=======
     if(msg.content==='!madeby') {
         console.log('!madeby');
->>>>>>> 7b949c3a6c3f72e5c13ce77855b50825d12c7d39
         msg.channel.send('this was made by RM20');
     }
     if (msg.content === '!blog') {
