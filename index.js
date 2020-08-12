@@ -43,6 +43,9 @@ client.on('message', msg => {
                 }
             });
         }
+        else{
+            msg.reply('need staff role');
+        }
     }
 });
 
