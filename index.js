@@ -15,7 +15,6 @@ client.on('message', msg => {
     if(msg.content === '!madeby') {
         console.log('!madeby');
         msg.channel.send('this was made by RM20');
-        msg.reply('need staff role. you can check in ' + msg.guild.channels.cache.get('741672480611237892').toString() + ' for latest blog');
     }
     if (msg.content === '!blog') {
         if (msg.member.roles.cache.find(r => r.name === '⁣       Staff Team       ⁣')) {
