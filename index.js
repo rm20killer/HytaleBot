@@ -12,14 +12,8 @@ client.on('message', msg => {
         msg.reply('pong');
         console.log('!ping');
     }
-    if(msg.content === '!madeby') {
-        console.log('!madeby');
-        msg.channel.send('this was made by RM20');
-    }
     if (msg.content === '!blog') {
-        if (msg.member.roles.cache.find(r => r.name === '⁣       Staff Team       ⁣')) {
         console.log('!blog');
-
         // eslint-disable-next-line no-unused-vars
         api.getArticles({}, function(error, data, response) {
             if (error) {
@@ -44,11 +38,6 @@ client.on('message', msg => {
                 }
             });
         }
-        else{
-            console.log('!blog user not staff');
-            msg.reply('need staff role. you can check in ' + msg.guild.channels.cache.get('741672480611237892').toString() + ' for latest blog');
-        }
-    }
 });
 
 client.login(process.env.token);
