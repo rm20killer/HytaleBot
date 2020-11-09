@@ -11,3 +11,8 @@ a bot to get latest blog post from hytale.com using [hytale's api](https://hytal
 
 !ping - pong
 ```
+### self-host
+
+add token
+
+`node index.js` to start
