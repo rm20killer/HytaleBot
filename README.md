@@ -7,7 +7,7 @@ a bot to get latest blog post from hytale.com using [hytale's api](https://hytal
 ### commands
 
 ```
-!blog - get latest blog post
+!blog (number) - if no number set only get latest. number higher than 3 will not work to prevent spam. 
 
 !ping - pong
 ```
