@@ -6,6 +6,6 @@ module.exports ={
     //prefix
     prefix:'!',
 
-    max='3', //max blog post. Default = 3
+    max: '3', //max blog post. Default = 3
 
 }
