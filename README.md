@@ -13,6 +13,6 @@ a bot to get latest blog post from hytale.com using [hytale's api](https://hytal
 ```
 ### self-host
 
-add token
+add token in config.js
 
 `node index.js` to start
