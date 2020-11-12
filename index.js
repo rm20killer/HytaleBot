@@ -3,7 +3,10 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const HytaleApi = require('hytale-api-sdk');
 const api = new HytaleApi.ArticlesApi();
-const prefix = '!';
+
+const config = require("./config");
+const prefix = config.prefix
+
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
 });
@@ -46,7 +49,7 @@ client.on('message', msg => {
                })
             })
         }
-        if(Number(input1) > 3){
+        if(Number(input1) > config.max){
             msg.channel.send("too high number")
         }
         else {
@@ -76,4 +79,5 @@ client.on('message', msg => {
     }
 });
 
-client.login(process.env.token);
+
+client.login(config.BotToken);
